@@ -2,7 +2,7 @@ package Sipwise::Base;
 use utf8;
 use Module::Runtime qw(use_module);
 use parent 'autodie';
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 our %features = (
     lambda => q(use lambda 'λ';),
@@ -46,7 +46,7 @@ Sipwise::Base - import boilerplate code
 
 =head1 VERSION
 
-This document describes Sipwise::Base version 1.000
+This document describes Sipwise::Base version 1.001
 
 =head1 SYNOPSIS
 

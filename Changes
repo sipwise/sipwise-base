@@ -4,6 +4,16 @@
 
 Changes - Revision history for Sipwise-Base
 
+=head2 1.001  2013-04-23
+
+=over
+
+=item add support for selectively skipping certain features through import
+
+=item coding standards advice about versions
+
+=back
+
 =head2 1.000  2013-03-21
 
 Initial release.
