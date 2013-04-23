@@ -30,6 +30,45 @@ L<Sipwise::Base> is a module that simply bundles common other modules that you a
 file - one line is enough to load all of them. The goal is to enable modern Perl programming and restrict some legacy
 features of the language that should not be used anymore in new code.
 
+=head2 versions
+
+=head3 examples
+
+    our $VERSION = '2.001'; # 2nd version of revision 2
+    our $VERSION = '2.420'; # 421st version of revision 2
+
+=head3 rationale
+
+Every module must have a version or else it is problematic to accurately specify a dependency when a distribution is
+split. It works best when the distribution version and each module's version are equal and increased in lock-step. To
+to make this easy, use C<perl-reversion>, which is part of L<Perl::Version>. Increase a version each time when you need
+to depend on a new features or a changed API from code external to the distribution, it should be followed by a release
+of the distribution.
+
+A version is a string consisting of a revision number, a literal dot as separator and a version number, altogether in
+the form C<y.xxx>. C<y> is a natural number, C<xxx> are exactly three zero-padded digits. String quoting prevents
+trailing zeroes from disappearing. Padding to the same amount of digits prevents confusion about C<< 1.10 < 1.9 >>.
+Having exactly one separator prevents confusion about C<5.10.1 == 5.010001>.
+
+Do not use the L<version> module for declaring versions. Using plain strings prevents that ugly C<v> prefix in a
+distribution tarball name. However, using the module to handle versions, e.g. for comparing them, is a good idea.
+
+Do not use L<v-strings|http://p3rl.org/data#Version-Strings>. They are poorly understood.
+
+Do not use underscores. Using underscores require to L<eval> the version to turn it into a number. If you want to mark
+a distribution as release candidate to the PAUSE indexer, add the word C<TRIAL> to the distribution name, see
+L<http://pause.perl.org/pause/query?ACTION=pause_04about#developerreleases>.
+
+=head3 compliance
+
+This scheme is fully compatible with the advice laid out in L<perlmodstyle>, L<version>,
+L<"strict" version rules|http://p3rl.org/perl5120delta#Version-number-formats>,
+L<"Version numbers should be boring"|http://www.dagolden.com/index.php/369/>,
+L<Perl::Critic::Policy::ValuesAndExpressions::ProhibitVersionStrings>,
+L<Perl::Critic::Policy::ValuesAndExpressions::RequireNumericVersion>.
+
+It is incompatible with L<semver|http://semver.org>.
+
 =head2 sample code template
 
 See L<Sipwise::Boilerplate> in this distribution.
