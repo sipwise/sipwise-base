@@ -15,7 +15,7 @@ sub import {
 package $caller;
 use lambda 'λ';
 use perl5i::2 -skip => [qw(Signatures Try::Tiny)];
-use Moose qw(extends has with);
+use Moose qw(after augment before extends has inner override super with);
 use MooseX::Method::Signatures;
 use TryCatch;
 

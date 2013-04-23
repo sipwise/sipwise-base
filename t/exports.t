@@ -25,7 +25,8 @@ eval {
 };
 ok !$@, 'switch syntax is available';
 
-ok(__PACKAGE__->can($_), "$_ function name is available") for qw(λ extends with has method list);
+ok(__PACKAGE__->can($_), "$_ function name is available")
+    for qw(λ after augment before extends has inner override super with method list);
 
 eval 'use t::MethodSignatures';
 try {
