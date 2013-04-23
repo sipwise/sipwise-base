@@ -1,6 +1,6 @@
 package Sipwise::Base;
 use utf8;
-use Module::Runtime qw(require_module);
+use Module::Runtime qw(use_module);
 use parent 'autodie';
 our $VERSION = '1.000';
 
@@ -8,11 +8,8 @@ sub import {
     my ($class) = @_;
     my $caller = caller;
 
-    require_module('strictures');
-    strictures->import(1);
-
-    require_module('perl5i::2');
-    perl5i::2->import(-skip => [qw(Signatures Try::Tiny)]);
+    use_module('strictures')->import(1);
+    use_module('perl5i::2')->import(-skip => [qw(Signatures Try::Tiny)]);
 
     eval <<"";
 package $caller;
