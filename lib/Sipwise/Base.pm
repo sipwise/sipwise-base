@@ -4,20 +4,31 @@ use Module::Runtime qw(use_module);
 use parent 'autodie';
 our $VERSION = '1.000';
 
+our %features = (
+    lambda => q(use lambda 'λ';),
+    perl5i => q(use perl5i::2 -skip => [qw(Signatures Try::Tiny)];),
+    Moose => q(use Moose qw(after augment before extends has inner override super with);),
+    'MooseX::Method::Signatures' => q(use MooseX::Method::Signatures;),
+    TryCatch => q(use TryCatch;),
+);
+
 sub import {
-    my ($class) = @_;
+    my ($class, %param) = @_;
+    if ($param{-skip}) {
+        for my $feature (@{ $param{-skip} }) {
+            delete $features{$feature};
+        }
+    }
     my $caller = caller;
 
     use_module('strictures')->import(1);
     use_module('perl5i::2')->import(-skip => [qw(Signatures Try::Tiny autodie)]);
 
-    eval <<"";
-package $caller;
-use lambda 'λ';
-use perl5i::2 -skip => [qw(Signatures Try::Tiny)];
-use Moose qw(after augment before extends has inner override super with);
-use MooseX::Method::Signatures;
-use TryCatch;
+    my $export = "package $caller;\n";
+    for my $f (sort keys %features) {
+        $export .= "$features{$f}\n";
+    }
+    eval $export;
 
     @_ = ($class, ':all');
     goto &autodie::import;
@@ -55,6 +66,12 @@ L<MooseX::Method::Signatures>, L<TryCatch>.
 =head2 C<import>
 
 See L<perlfunc/import>.
+
+By passing an arrayref to C<-skip>, you can disable features:
+
+    use Sipwise::Base -skip => ['Moose'];   # skip importing Moose
+
+The features strings are C<lambda>, C<perl5i>, C<Moose>, C<MooseX::Method::Signatures>, C<TryCatch>.
 
 =head2 Exports
 
