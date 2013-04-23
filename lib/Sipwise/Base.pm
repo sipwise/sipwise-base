@@ -9,7 +9,7 @@ sub import {
     my $caller = caller;
 
     use_module('strictures')->import(1);
-    use_module('perl5i::2')->import(-skip => [qw(Signatures Try::Tiny)]);
+    use_module('perl5i::2')->import(-skip => [qw(Signatures Try::Tiny autodie)]);
 
     eval <<"";
 package $caller;
