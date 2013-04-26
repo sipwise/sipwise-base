@@ -1,7 +1,7 @@
 use Module::Build qw();
 my $builder = Module::Build->new(
     module_name       => 'Sipwise-Base',
-    license           => 'restrictive',
+    license           => 'GPL_3',
     dist_author       => 'Lars Dieckow <ldieckow@sipwise.com>',
     dist_version_from => 'lib/Sipwise/Base.pm',
     build_requires    => {
