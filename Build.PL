@@ -9,7 +9,6 @@ my $builder = Module::Build->new(
     },
     requires => {
         'autodie'                    => 0,
-        'lambda'                     => 0,
         'Module::Runtime'            => 0,
         'Moose'                      => 2,
         'MooseX::Method::Signatures' => 0,

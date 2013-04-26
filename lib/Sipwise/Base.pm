@@ -5,7 +5,6 @@ use parent 'autodie';
 our $VERSION = '1.001';
 
 our %features = (
-    lambda => q(use lambda 'λ';),
     perl5i => q(use perl5i::2 -skip => [qw(Signatures Try::Tiny)];),
     Moose => q(use Moose qw(after augment before extends has inner override super with);),
     'MooseX::Method::Signatures' => q(use MooseX::Method::Signatures;),
@@ -58,7 +57,7 @@ The purpose of this module is to reduce the amount of boilerplate code and to en
 available by default. This is in the spirit of
 L<http://modernperlbooks.com/mt/2009/10/remove-the-little-pessimizations.html|eliminating pessimisations>.
 
-Switches on the functionality of the pragmatic modules L<strictures>, L<lambda>, L<perl5i>, L<Moose>,
+Switches on the functionality of the pragmatic modules L<strictures>, L<perl5i>, L<Moose>,
 L<MooseX::Method::Signatures>, L<TryCatch>.
 
 =head1 INTERFACE
@@ -71,7 +70,7 @@ By passing an arrayref to C<-skip>, you can disable features:
 
     use Sipwise::Base -skip => ['Moose'];   # skip importing Moose
 
-The features strings are C<lambda>, C<perl5i>, C<Moose>, C<MooseX::Method::Signatures>, C<TryCatch>.
+The features strings are C<perl5i>, C<Moose>, C<MooseX::Method::Signatures>, C<TryCatch>.
 
 =head2 Exports
 
