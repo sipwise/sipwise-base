@@ -4,6 +4,16 @@
 
 Changes - Revision history for Sipwise-Base
 
+=head2 1.002  2013-04-29
+
+=over
+
+=item change licence to GPL3+
+
+=item remove L<lambda> feature for easier packaging
+
+=back
+
 =head2 1.001  2013-04-23
 
 =over

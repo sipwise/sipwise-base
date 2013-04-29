@@ -1,6 +1,6 @@
 package Sipwise::Boilerplate;
 use Sipwise::Base;
-our $VERSION = '1.001';
+our $VERSION = '1.002';
 
 __END__
 
