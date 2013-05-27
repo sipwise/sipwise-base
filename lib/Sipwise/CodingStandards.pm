@@ -18,7 +18,7 @@ This document describes Sipwise::CodingStandards version 1.002
 
 This document outlines the coding standards for new Perl projects. Their purpose is to guide programmers to a common
 code style and practices, making decisions so you don't have to. Follow them unless you have a good reason not to. See
-L<http://oreilly.com/catalog/perlbp/|chapter 1 in PBP> for the rationale. Taking Perl's philosophy to heart, the
+L<chapter 1 in PBP|http://oreilly.com/catalog/perlbp/> for the rationale. Taking Perl's philosophy to heart, the
 standards are not enforced – it's up to the programmer to use common sense and sound judgement in applying them.
 
 The standards are not set in stone, either. If you notice that consistently I<not> following them produces better
@@ -55,8 +55,8 @@ distribution tarball name. However, using the module to handle versions, e.g. fo
 
 Do not use L<v-strings|http://p3rl.org/data#Version-Strings>. They are poorly understood.
 
-Do not use underscores. Using underscores require to L<eval> the version to turn it into a number. If you want to mark
-a distribution as release candidate to the PAUSE indexer, add the word C<TRIAL> to the distribution name, see
+Do not use underscores. Using underscores require to L<perlfunc/eval> the version to turn it into a number. If you want
+to mark a distribution as release candidate to the PAUSE indexer, add the word C<TRIAL> to the distribution name, see
 L<http://pause.perl.org/pause/query?ACTION=pause_04about#developerreleases>.
 
 =head3 compliance
