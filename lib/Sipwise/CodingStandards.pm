@@ -34,6 +34,13 @@ features of the language that should not be used anymore in new code.
 
 =head3 examples
 
+For modules:
+
+    package Foo::Bar 2.001; # 2nd version of revision 2
+    package Fnord 2.420;    # 421st version of revision 2
+
+Otherwise:
+
     our $VERSION = '2.001'; # 2nd version of revision 2
     our $VERSION = '2.420'; # 421st version of revision 2
 
@@ -45,7 +52,10 @@ to make this easy, use C<perl-reversion>, which is part of L<Perl::Version>. Inc
 to depend on a new features or a changed API from code external to the distribution, it should be followed by a release
 of the distribution.
 
-A version is a string consisting of a revision number, a literal dot as separator and a version number, altogether in
+When using the L<perlfunc/package> declaration, a version is a rational number. If a C<package> declaration is not
+suitable, declare the magic C<$VERSION> variable (see L<perlobj/VERSION($need)>) and then a version is a string.
+
+In any case, the version consists of a revision number, a literal dot as separator and a version number, altogether in
 the form C<y.xxx>. C<y> is a natural number, C<xxx> are exactly three zero-padded digits. String quoting prevents
 trailing zeroes from disappearing. Padding to the same amount of digits prevents confusion about C<< 1.10 < 1.9 >>.
 Having exactly one separator prevents confusion about C<5.10.1 == 5.010001>.

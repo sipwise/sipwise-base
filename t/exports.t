@@ -48,4 +48,6 @@ try {
     ok $e->isa('Foobar'), 'TryCatch works';
 }
 
+ok uc("\xe4") eq "\xc4", 'unicode_strings in effect';
+
 done_testing;

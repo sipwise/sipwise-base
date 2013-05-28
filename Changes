@@ -6,7 +6,13 @@ Changes - Revision history for Sipwise-Base
 
 =head2 1.004  2013-07-04
 
-declare L<strictures> dependencies, only used for developers
+=over
+
+=item declare L<strictures> dependencies, only used for developers
+
+=item Perl minimum version 5.14, brings changes to versioning and a Unicode handling aspect
+
+=back
 
 =head2 1.003  2013-06-17
 

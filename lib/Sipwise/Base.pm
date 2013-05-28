@@ -1,4 +1,5 @@
 package Sipwise::Base;
+use 5.014;
 use utf8;
 use Module::Runtime qw(use_module);
 use parent 'autodie';

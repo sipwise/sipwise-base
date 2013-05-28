@@ -15,11 +15,9 @@ Sipwise::Boilerplate - a template for new code
 Copy the following text, outdent it, save to a new file, then fill it in. Delete the C<=for author> POD sections after
 you are done with them.
 
-    package Something::Or::Other;
+    package Something::Or::Other 1.000;
     use Sipwise::Base;
     use namespace::sweep;
-
-    our $VERSION = '1.000';
 
     … # attributes, methods, package-level code go here
 

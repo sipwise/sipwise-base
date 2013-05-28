@@ -18,6 +18,7 @@ my $builder = Module::Build->new(
         'Moose'                      => 2,
         'MooseX::Method::Signatures' => 0,
         'parent'                     => 0,
+        'perl'                       => '5.014',
         'perl5i::2'                  => 0,
         'strictures'                 => 1,
         'TryCatch'                   => 0,
