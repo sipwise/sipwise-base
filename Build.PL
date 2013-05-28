@@ -4,8 +4,14 @@ my $builder = Module::Build->new(
     license           => 'GPL_3',
     dist_author       => 'Lars Dieckow <ldieckow@sipwise.com>',
     dist_version_from => 'lib/Sipwise/Base.pm',
-    build_requires    => {
+    configure_requires => {
+        'Module::Build' => '0.4004',
+    },
+    test_requires    => {
+        'Moose::Util::TypeConstraints' => 0,
+        'Test::DescribeMe' => 0,
         'Test::More' => '0.88',
+        'Test::Spelling' => 0,
     },
     requires => {
         'autodie'                    => 0,

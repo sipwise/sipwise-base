@@ -18,7 +18,7 @@ This document describes Sipwise::CodingStandards version 1.002
 
 This document outlines the coding standards for new Perl projects. Their purpose is to guide programmers to a common
 code style and practices, making decisions so you don't have to. Follow them unless you have a good reason not to. See
-L<chapter 1 in PBP|http://oreilly.com/catalog/perlbp/> for the rationale. Taking Perl's philosophy to heart, the
+L<< chapter 1 in I<PBP>|http://oreilly.com/catalog/perlbp/ >> for the rationale. Taking Perl's philosophy to heart, the
 standards are not enforced – it's up to the programmer to use common sense and sound judgement in applying them.
 
 The standards are not set in stone, either. If you notice that consistently I<not> following them produces better
@@ -67,7 +67,7 @@ L<"Version numbers should be boring"|http://www.dagolden.com/index.php/369/>,
 L<Perl::Critic::Policy::ValuesAndExpressions::ProhibitVersionStrings>,
 L<Perl::Critic::Policy::ValuesAndExpressions::RequireNumericVersion>.
 
-It is incompatible with L<semver|http://semver.org>.
+It is incompatible with L<< I<semver>|http://semver.org >>.
 
 =head2 sample code template
 
@@ -90,7 +90,7 @@ L<perltidy> sometimes produces not optimal results with immediately nested pairs
         },
     );
 
-It is okay to manually fix this for symmetry.
+It is OK to manually fix this for symmetry.
 
     $resultset->find(
         {
