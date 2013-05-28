@@ -11,7 +11,6 @@ my $builder = Module::Build->new(
         'Moose::Util::TypeConstraints' => 0,
         'Test::DescribeMe' => 0,
         'Test::More' => '0.88',
-        'Test::Spelling' => 0,
     },
     requires => {
         'autodie'                    => 0,
@@ -23,6 +22,14 @@ my $builder = Module::Build->new(
         'strictures'                 => 1,
         'TryCatch'                   => 0,
         'utf8'                       => 0,
+    },
+    # these are actually <http://p3rl.org/CPAN::Meta::Spec#develop>,
+    # but nothing consumes this yet
+    recommends => {
+        'bareword::filehandles' => 0,
+        'indirect' => 0,
+        'multidimensional' => 0,
+        'Test::Spelling' => 0,
     },
     add_to_cleanup => ['Sipwise-Base-*'],
 );
