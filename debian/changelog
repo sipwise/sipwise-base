@@ -1,3 +1,16 @@
+libsipwise-base-perl (1.003) unstable; urgency=low
+
+  [ Michael Prokop ]
+  * Drop usage of λ, being the lambda package which is
+    unavailable in Debian
+  * debian/copyright: use GPL3
+
+  [ Lars Dieckow ]
+  * POD errors
+  * spelling
+
+ -- Michael Prokop <mprokop@sipwise.com>  Mon, 17 Jun 2013 14:59:53 +0200
+
 libsipwise-base-perl (1.001) unstable; urgency=low
 
   * Initial release.
