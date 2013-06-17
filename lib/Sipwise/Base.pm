@@ -2,7 +2,7 @@ package Sipwise::Base;
 use utf8;
 use Module::Runtime qw(use_module);
 use parent 'autodie';
-our $VERSION = '1.002';
+our $VERSION = '1.003';
 
 our %features = (
     perl5i => q(use perl5i::2 -skip => [qw(Signatures Try::Tiny)];),
@@ -45,7 +45,7 @@ Sipwise::Base - import boilerplate code
 
 =head1 VERSION
 
-This document describes Sipwise::Base version 1.002
+This document describes Sipwise::Base version 1.003
 
 =head1 SYNOPSIS
 
