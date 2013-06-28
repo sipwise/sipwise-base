@@ -1,5 +1,5 @@
 Source: libsipwise-base-perl
-Section: admin
+Section: perl
 Priority: extra
 Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends: debhelper (>= 8),
@@ -12,6 +12,11 @@ Homepage: http://sipwise.com/
 
 Package: libsipwise-base-perl
 Architecture: all
-Depends: ${misc:Depends}, ${perl:Depends}
+Depends: libmoosex-method-signatures-perl,
+         libperl5i-perl,
+         libstrictures-perl,
+         libtrycatch-perl,
+         ${misc:Depends},
+         ${perl:Depends}
 Description: Perl module Sipwise::Base
  TODO
