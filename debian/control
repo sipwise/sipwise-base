@@ -12,6 +12,6 @@ Homepage: http://sipwise.com/
 
 Package: libsipwise-base-perl
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ${perl:Depends}
 Description: Perl module Sipwise::Base
  TODO
