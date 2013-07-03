@@ -1,3 +1,10 @@
+libsipwise-base-perl (1.003.1) unstable; urgency=low
+
+  * [2462382] Add ${perl:Depends} to Depends
+  * [f1bf29e] Add perl modules to depends
+
+ -- Michael Prokop <mprokop@sipwise.com>  Wed, 03 Jul 2013 16:56:44 +0200
+
 libsipwise-base-perl (1.003) unstable; urgency=low
 
   [ Michael Prokop ]
