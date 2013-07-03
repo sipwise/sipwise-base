@@ -3,8 +3,9 @@ Section: perl
 Priority: extra
 Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends: debhelper (>= 8),
+               libindirect-perl (>= 0.30),
                libmoosex-method-signatures-perl,
-               libperl5i-perl,
+               libperl5i-perl (>= 2.12),
                libstrictures-perl,
                libtrycatch-perl
 Standards-Version: 3.9.4
@@ -12,8 +13,9 @@ Homepage: http://sipwise.com/
 
 Package: libsipwise-base-perl
 Architecture: all
-Depends: libmoosex-method-signatures-perl,
-         libperl5i-perl,
+Depends: libindirect-perl (>= 0.30),
+         libmoosex-method-signatures-perl,
+         libperl5i-perl (>= 2.12),
          libstrictures-perl,
          libtrycatch-perl,
          ${misc:Depends},
