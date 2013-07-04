@@ -1,6 +1,5 @@
-package Sipwise::CodingStandards;
+package Sipwise::CodingStandards 1.004;
 use Sipwise::Base;
-our $VERSION = '1.003';
 
 __END__
 
@@ -12,7 +11,7 @@ Sipwise::CodingStandards - Sipwise Perl coding standards
 
 =head1 VERSION
 
-This document describes Sipwise::CodingStandards version 1.003
+This document describes Sipwise::CodingStandards version 1.004
 
 =head1 DESCRIPTION
 

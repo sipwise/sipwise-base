@@ -1,3 +1,10 @@
+libsipwise-base-perl (1.004) unstable; urgency=low
+
+  * declare L<strictures> dependencies, only used for developers
+  * Perl minimum version 5.14, brings changes to versioning and a Unicode handling aspect
+
+ -- Lars Dieckow <ldieckow@sipwise.com>  Thu, 04 Jul 2013 15:43:32 +0200
+
 libsipwise-base-perl (1.003.1) unstable; urgency=low
 
   * [2462382] Add ${perl:Depends} to Depends
