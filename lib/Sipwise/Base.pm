@@ -21,7 +21,9 @@ sub import {
     my $caller = caller;
 
     use_module('strictures')->import(1);
-    use_module('perl5i::2')->import(-skip => [qw(Signatures Try::Tiny autodie)]);
+    my @skip = qw(Signatures Try::Tiny autodie);
+    push @skip, 'CLASS' if __PACKAGE__->can('CLASS');
+    use_module('perl5i::2')->import(-skip => [@skip]);
 
     my $export = "package $caller;\n";
     for my $f (sort keys %features) {
