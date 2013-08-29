@@ -4,15 +4,15 @@ use utf8;
 use Module::Runtime qw(use_module);
 use parent 'autodie';
 
-our %features = (
-    perl5i => q(use perl5i::2 -skip => [qw(Signatures Try::Tiny)];),
-    Moose => q(use Moose qw(after augment before extends has inner override super with);),
-    'MooseX::Method::Signatures' => q(use MooseX::Method::Signatures;),
-    TryCatch => q(use TryCatch;),
-);
-
 sub import {
     my ($class, %param) = @_;
+    my %features = (
+        perl5i => q(use perl5i::2 -skip => [qw(Signatures Try::Tiny autodie)];),
+        Moose => q(use Moose qw(after augment before extends has inner override super with);),
+        'MooseX::Method::Signatures' => q(use MooseX::Method::Signatures;),
+        TryCatch => q(use TryCatch;),
+    );
+
     if ($param{-skip}) {
         for my $feature (@{ $param{-skip} }) {
             delete $features{$feature};
