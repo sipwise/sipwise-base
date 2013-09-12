@@ -1,4 +1,4 @@
-package Sipwise::Release 1.004;
+package Sipwise::Release 1.005;
 use Sipwise::Base;
 
 __END__
@@ -11,7 +11,7 @@ Sipwise::Release - Sipwise Release Documentation
 
 =head1 VERSION
 
-This document describes Sipwise::Release version 1.004
+This document describes Sipwise::Release version 1.005
 
 =head1 TAGGING A NEW RELEASE
 

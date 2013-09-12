@@ -1,4 +1,4 @@
-package Sipwise::Base 1.004;
+package Sipwise::Base 1.005;
 use 5.014;
 use utf8;
 use Module::Runtime qw(use_module);
@@ -47,7 +47,7 @@ Sipwise::Base - import boilerplate code
 
 =head1 VERSION
 
-This document describes Sipwise::Base version 1.004
+This document describes Sipwise::Base version 1.005
 
 =head1 SYNOPSIS
 

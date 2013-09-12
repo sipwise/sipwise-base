@@ -1,4 +1,4 @@
-package Sipwise::Boilerplate 1.004;
+package Sipwise::Boilerplate 1.005;
 use Sipwise::Base;
 
 __END__
