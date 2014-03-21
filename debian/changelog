@@ -1,8 +1,8 @@
-libsipwise-base-perl (1.005+0~mr3.3) unstable; urgency=low
+libsipwise-base-perl (1.6.0.0+0~mr3.3.0.0) unstable; urgency=low
 
   * New release.
 
- -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Sat, 01 Feb 2014 19:59:40 +0100
+ -- Alexander Lutay <alutay@sipwise.com>  Fri, 21 Mar 2014 13:56:08 +0100
 
 libsipwise-base-perl (1.005) unstable; urgency=low
 
