@@ -6,7 +6,6 @@ use parent 'autodie';
 sub import {
     my ($class, %param) = @_;
     my %features = (
-        Moose => q(use Moose qw(after augment before extends has inner override super with);),
         TryCatch => q(use TryCatch;),
         'Hash::Merge' => q(use Hash::Merge qw(merge);),
         'Data::Types' => q(use Data::Types qw(:all);),
