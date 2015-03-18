@@ -1,3 +1,15 @@
+libsipwise-base-perl (1.12.0.0+0~mr4.0.0.0) unstable; urgency=low
+
+  [ Michael Prokop ]
+  * [4e1a2e1] MT#9127 Bump Standards-Version to 3.9.6
+
+  [ Andreas Granig ]
+  * [ac28e80] MT#7013 Add .gitreview
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Wed, 18 Mar 2015 14:18:19 +0100
+
 libsipwise-base-perl (1.11.0.0+0~mr3.8.0.0) unstable; urgency=low
 
   * New release.
