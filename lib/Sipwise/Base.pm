@@ -1,15 +1,11 @@
 package Sipwise::Base 1.005;
 use 5.014;
-use utf8;
 use Module::Runtime qw(use_module);
 use parent 'autodie';
 
 sub import {
     my ($class, %param) = @_;
     my %features = (
-        perl5i => q(use perl5i::2 -skip => [qw(Signatures Try::Tiny autodie)];),
-        Moose => q(use Moose qw(after augment before extends has inner override super with);),
-        'MooseX::Method::Signatures' => q(use MooseX::Method::Signatures;),
         TryCatch => q(use TryCatch;),
     );
 
@@ -21,9 +17,6 @@ sub import {
     my $caller = caller;
 
     use_module('strictures')->import(1);
-    my @skip = qw(Signatures Try::Tiny autodie);
-    push @skip, 'CLASS' if __PACKAGE__->can('CLASS');
-    use_module('perl5i::2')->import(-skip => [@skip]);
 
     my $export = "package $caller;\n";
     for my $f (sort keys %features) {
