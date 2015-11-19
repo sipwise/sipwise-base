@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a51691d_12962995",
+        "filename": "lib/Sipwise/Base.pm",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2015-11-19T05:22:47Z",
+      "side": 0,
+      "message": "removing this might break subs in /Utils/Messages.pm ? Could be verified quickly by provoking a red error message in panel UI imho.",
+      "range": {
+        "startLine": 12,
+        "startChar": 8,
+        "endLine": 12,
+        "endChar": 75
+      },
+      "revId": "561f3b1fdf986dc35059d27c89b560b960770a85",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
