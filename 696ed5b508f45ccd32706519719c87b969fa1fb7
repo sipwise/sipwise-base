@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a51691d_9acc6f37",
+        "filename": "lib/Sipwise/Base.pm",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2015-11-20T03:43:56Z",
+      "side": 1,
+      "message": "what if we even take out trcatch here? it is often not required and isn\u0027t it causing lot of compile time overhead during startup?\nmodules are use-ing try catch separately quite often. and panel should immediatly fail at startup, if it is still missing somewhere.",
+      "range": {
+        "startLine": 9,
+        "startChar": 8,
+        "endLine": 9,
+        "endChar": 37
+      },
+      "revId": "696ed5b508f45ccd32706519719c87b969fa1fb7",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
