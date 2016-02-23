@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 8),
                libperl5i-perl (>= 2.12),
                libstrictures-perl,
                libtrycatch-perl
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://sipwise.com/
 
 Package: libsipwise-base-perl
