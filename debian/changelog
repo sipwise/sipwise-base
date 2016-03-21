@@ -1,3 +1,15 @@
+libsipwise-base-perl (1.15.1.0+0~mr4.3.1.0) unstable; urgency=medium
+
+  [ Guillem Jover ]
+  * [26d257b] MT#16473 Convert debian/copyright to machine-readable format
+
+  [ Michael Prokop ]
+  * [b1b43ef] MT#17699 Bump Standards-Version to 3.9.7
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 21 Mar 2016 22:34:36 +0100
+
 libsipwise-base-perl (1.15.0.0+0~mr4.3.0.0) unstable; urgency=medium
 
   [ Andreas Granig ]
