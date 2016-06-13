@@ -25,22 +25,8 @@ eval {
 };
 ok !$@, 'switch syntax is available';
 
-ok(__PACKAGE__->can($_), "$_ function name is available")
-    for qw(after augment before extends has inner override super with method list);
-
-eval 'use t::MethodSignatures';
-try {
-     MethodSignatures->new->greet(123);
-} catch($e) {
-    ok $e =~ /^Validation failed/;
-}
-
-ok MethodSignatures->new->greet('world') eq 'Hello, world!', 'method signatures';
-
 eval { unlink '/tmp/doesnotexist' };
 ok $@, 'autodie is in effect';
-
-ok 2->pow(8), 'autobox is in effect';
 
 try {
     die bless { fnord => 42 } => 'Foobar';

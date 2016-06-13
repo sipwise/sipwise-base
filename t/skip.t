@@ -1,7 +1,7 @@
-use Sipwise::Base -skip => ['Moose'];
+use Sipwise::Base -skip => ['TryCatch'];
 use Test::More import => [qw(done_testing ok)];
 
-ok(!__PACKAGE__->can($_), "Moose $_ function name is not available")
-    for qw(after augment before extends has inner override super with);
+ok(!__PACKAGE__->can($_), "TryCatch $_ function name is not available")
+    for qw(try catch);
 
 done_testing;

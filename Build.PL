@@ -8,19 +8,14 @@ my $builder = Module::Build->new(
         'Module::Build' => '0.4004',
     },
     test_requires    => {
-        'Moose::Util::TypeConstraints' => 0,
         'Test::DescribeMe' => 0,
         'Test::More' => '0.88',
     },
     requires => {
         'autodie'                    => 0,
-        'indirect'                   => 'v0.30',
         'Module::Runtime'            => 0,
-        'Moose'                      => 2,
-        'MooseX::Method::Signatures' => 0,
         'parent'                     => 0,
         'perl'                       => '5.014',
-        'perl5i::2'                  => 'v2.12',
         'strictures'                 => 1,
         'TryCatch'                   => 0,
         'utf8'                       => 0,
@@ -29,7 +24,6 @@ my $builder = Module::Build->new(
     # but nothing consumes this yet
     recommends => {
         'bareword::filehandles' => 0,
-        'indirect' => 0,
         'multidimensional' => 0,
         'Test::Spelling' => 0,
     },
