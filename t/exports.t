@@ -13,26 +13,23 @@ ok $@, 'strict refs';
 eval { my $foo = 1 + undef };
 ok $@, 'fatal warnings';
 
-ok say(''), 'say syntax is available';
+eval 'say("")';
+ok !$@, 'say syntax is available';
 
-ok state $foobar = 1, 'state syntax is available';
+eval 'state $foobar = 1';
+ok !$@, 'state syntax is available';
 
-eval {
-    given (1) {
-        when (1) {}
-        default {1}
-    }
-};
-ok !$@, 'switch syntax is available';
-
-eval { unlink '/tmp/doesnotexist' };
+eval { unlink '/nonexistent' };
 ok $@, 'autodie is in effect';
 
-try {
-    die bless { fnord => 42 } => 'Foobar';
-} catch (Foobar $e) {
-    ok $e->isa('Foobar'), 'TryCatch works';
-}
+eval q{
+    try {
+        die bless { fnord => 42 } => 'Foobar';
+    } catch (Foobar $e) {
+        $e->isa('Foobar') or die 'TryCatch failed';
+    }
+};
+ok !$@, 'TryCatch is available and works';
 
 ok uc("\xe4") eq "\xc4", 'unicode_strings in effect';
 
