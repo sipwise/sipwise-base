@@ -6,6 +6,7 @@ Build-Depends:
  debhelper (>= 8),
  libstrictures-perl,
  libtrycatch-perl,
+ libtest-spelling-perl,
 Standards-Version: 3.9.7
 Homepage: http://sipwise.com/
 

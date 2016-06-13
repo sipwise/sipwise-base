@@ -8,7 +8,7 @@ my $builder = Module::Build->new(
         'Module::Build' => '0.4004',
     },
     test_requires    => {
-        'Test::DescribeMe' => 0,
+        'Test::Spelling' => 0,
         'Test::More' => '0.88',
     },
     requires => {
@@ -25,7 +25,6 @@ my $builder = Module::Build->new(
     recommends => {
         'bareword::filehandles' => 0,
         'multidimensional' => 0,
-        'Test::Spelling' => 0,
     },
     add_to_cleanup => ['Sipwise-Base-*'],
 );
