@@ -1,5 +1,5 @@
 package Sipwise::Base 1.005;
-use 5.014;
+
 use Module::Runtime qw(use_module);
 use parent 'autodie';
 
@@ -16,7 +16,8 @@ sub import {
     }
     my $caller = caller;
 
-    use_module('strictures')->import(1);
+    use_module('strictures')->import(version => 1);
+    use_module('feature')->import(':5.14');
 
     my $export = "package $caller;\n";
     for my $f (sort keys %features) {
