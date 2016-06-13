@@ -4,6 +4,8 @@ Priority: extra
 Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends:
  debhelper (>= 8),
+ libipc-system-simple-perl,
+ libmodule-build-perl,
  libstrictures-perl,
  libtest-spelling-perl,
  libtrycatch-perl,
