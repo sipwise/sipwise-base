@@ -52,8 +52,8 @@ The purpose of this module is to reduce the amount of boilerplate code and to en
 available by default. This is in the spirit of
 L<http://modernperlbooks.com/mt/2009/10/remove-the-little-pessimizations.html|eliminating pessimisations>.
 
-Switches on the functionality of the pragmatic modules L<strictures>, L<perl5i>, L<Moose>,
-L<MooseX::Method::Signatures>, L<TryCatch>.
+Switches on the functionality of the pragmatic modules L<strictures>,
+L<TryCatch>.
 
 =head1 INTERFACE
 
@@ -63,9 +63,9 @@ See L<perlfunc/import>.
 
 By passing an arrayref to C<-skip>, you can disable features:
 
-    use Sipwise::Base -skip => ['Moose'];   # skip importing Moose
+    use Sipwise::Base -skip => ['TryCatch'];   # skip importing TryCatch
 
-The features strings are C<perl5i>, C<Moose>, C<MooseX::Method::Signatures>, C<TryCatch>.
+The features strings are C<TryCatch>.
 
 =head2 Exports
 
