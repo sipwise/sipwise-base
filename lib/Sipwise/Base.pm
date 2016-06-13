@@ -16,7 +16,7 @@ sub import {
     }
     my $caller = caller;
 
-    strictures->import(1);
+    strictures->import(version => 1);
 
     my $export = "package $caller;\n";
     for my $f (sort keys %features) {
