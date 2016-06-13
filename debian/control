@@ -5,6 +5,7 @@ Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends:
  debhelper (>= 8),
  libstrictures-perl,
+ libtest-spelling-perl,
  libtrycatch-perl,
 Standards-Version: 3.9.7
 Homepage: http://sipwise.com/
