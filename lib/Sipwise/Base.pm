@@ -1,6 +1,7 @@
 package Sipwise::Base 1.005;
-use 5.014;
+
 use strictures ();
+use feature ();
 use parent 'autodie';
 
 sub import {
@@ -17,6 +18,7 @@ sub import {
     my $caller = caller;
 
     strictures->import(version => 1);
+    feature->import(':5.14');
 
     my $export = "package $caller;\n";
     for my $f (sort keys %features) {
