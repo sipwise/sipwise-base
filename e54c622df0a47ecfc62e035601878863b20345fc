@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dabed58f_5d204d9b",
+        "filename": "debian/control",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-13T20:16:10Z",
+      "side": 1,
+      "message": "just to mention: fatalized system() might be needed by build here, but dangerous in regular ngcp stuff - usually the exit code is checked explicitly",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_1d3ad5cd",
+        "filename": "lib/Sipwise/Base.pm",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-13T20:16:10Z",
+      "side": 1,
+      "message": "does it also dies like the old \"use 5.0.14\" did?\n\nso here 5.014 language feature are active for the module to import. just curious, would itbe possible to load modules in different perl langue feature versions each?",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 43
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_fd19017a",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-13T20:16:10Z",
+      "side": 1,
+      "message": "just to mention: afaik not used by anyone",
+      "range": {
+        "startLine": 19,
+        "startChar": 6,
+        "endLine": 19,
+        "endChar": 11
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_3d10f94d",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-13T20:16:10Z",
+      "side": 1,
+      "message": "this actually checks for matching exception object names, which is already a detail feature of trycatch.\n\nif trycatch is not present, the parser might imho fail when it sees an  \"try {\" already, so wouldn\u0027t it be better to put the whole try stuff in an eval as well?",
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_bd2b8981",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-13T20:16:10Z",
+      "side": 1,
+      "message": "maybe adding a simple test if threading is ok/available; thats why i made ngcp-panel/t/api-rest/threads.t",
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
