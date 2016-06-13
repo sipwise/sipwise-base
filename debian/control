@@ -5,6 +5,7 @@ Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends:
  debhelper (>= 8),
  libindirect-perl (>= 0.30),
+ libipc-system-simple-perl,
  libstrictures-perl,
  libtrycatch-perl,
 Standards-Version: 3.9.7
@@ -14,6 +15,7 @@ Package: libsipwise-base-perl
 Architecture: all
 Depends:
  libindirect-perl (>= 0.30),
+ libipc-system-simple-perl,
  libstrictures-perl,
  libtrycatch-perl,
  ${misc:Depends},
