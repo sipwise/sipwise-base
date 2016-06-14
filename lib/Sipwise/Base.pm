@@ -17,7 +17,7 @@ sub import {
     }
     my $caller = caller;
 
-    strictures->import(version => 1);
+    strictures->import(version => 2);
     feature->import(':5.14');
 
     my $export = "package $caller;\n";
