@@ -13,7 +13,6 @@ my $builder = Module::Build->new(
     requires => {
         'autodie'                    => 0,
         'indirect'                   => 'v0.30',
-        'Module::Runtime'            => 0,
         'parent'                     => 0,
         'perl'                       => '5.014',
         'strictures'                 => 1,
