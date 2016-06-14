@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_1dddf570",
+        "filename": "debian/control",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2016-06-14T09:56:12Z",
+      "side": 1,
+      "message": "Hmm, actually this module has always enabled \u0027:all\u0027 from autodie, see its import method. So I need to add it too to the Depends line. And I don\u0027t think it would be safe at this point in time to stop doing that as current code executing system/exec might then not die correctly. So if we want to disable this and change \u0027:all\u0027 to \u0027:default\u0027 we\u0027d need to audit the users and prepare a transition. Which seems out of scope for this specific change.\n\nI also notice that ngcp-panel is depending on libautodie-perl and libipc-system-perl which it should in principle not, as those are transitive dependencies from the libsipwise-base-perl, and should be depended by the latter only.",
+      "parentUuid": "dabed58f_5d204d9b",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_1d3ad5cd",
         "filename": "lib/Sipwise/Base.pm",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2016-06-13T20:16:10Z",
       "side": 1,
       "message": "does it also dies like the old \"use 5.0.14\" did?\n\nso here 5.014 language feature are active for the module to import. just curious, would itbe possible to load modules in different perl langue feature versions each?",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 43
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_1daf35e5",
+        "filename": "lib/Sipwise/Base.pm",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2016-06-14T09:56:12Z",
+      "side": 1,
+      "message": "\u003e does it also dies like the old \"use 5.0.14\" did?\n\nOn perl \u003c 5.14 it will croak yes.\n\n\u003e so here 5.014 language feature are active for the module to import.\n\nThey are activated for the code that uses this module, so those features\nget \"imported\" into the user\u0027s scope.\n\n\u003e just curious, would it be possible to load modules in different perl\n\u003e langue feature versions each?\n\nI\u0027m not sure I understand the question. Do you mean enabling different things depending on the perl currently in use? If so there is \":all\", but that seems strange, as then the user will not know which features are really present or not, so there\u0027s no guarantees provided by the module then.",
+      "parentUuid": "dabed58f_1d3ad5cd",
       "range": {
         "startLine": 20,
         "startChar": 4,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_3dac79ed",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2016-06-14T09:56:12Z",
+      "side": 1,
+      "message": "Ah ok, in any case it does no harm and I think it\u0027s a nice feature. :)",
+      "parentUuid": "dabed58f_fd19017a",
+      "range": {
+        "startLine": 19,
+        "startChar": 6,
+        "endLine": 19,
+        "endChar": 11
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_3d10f94d",
         "filename": "t/exports.t",
         "patchSetId": 3
@@ -88,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_fd8ca181",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2016-06-14T09:56:12Z",
+      "side": 1,
+      "message": "True, I can do that.",
+      "parentUuid": "dabed58f_3d10f94d",
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_bd2b8981",
         "filename": "t/exports.t",
         "patchSetId": 3
@@ -99,6 +189,24 @@
       "writtenOn": "2016-06-13T20:16:10Z",
       "side": 1,
       "message": "maybe adding a simple test if threading is ok/available; thats why i made ngcp-panel/t/api-rest/threads.t",
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_7df8b1e5",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2016-06-14T09:56:12Z",
+      "side": 1,
+      "message": "This seems a bit out of scope for this specific change which is to fix the current test suite. \n\nBut as a separate change I guess it might make sense to move the check here so that it\u0027s a common feature anything relying on Sipwise::Base can rely on. But probably as a new threads.t unit test. :)",
+      "parentUuid": "dabed58f_bd2b8981",
       "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
