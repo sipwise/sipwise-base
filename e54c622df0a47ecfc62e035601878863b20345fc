@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_5de7ede4",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2016-06-14T13:38:11Z",
+      "side": 1,
+      "message": "actually, ira and I have experimented with it",
+      "parentUuid": "dabed58f_3dac79ed",
+      "range": {
+        "startLine": 19,
+        "startChar": 6,
+        "endLine": 19,
+        "endChar": 11
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_3d10f94d",
         "filename": "t/exports.t",
         "patchSetId": 3
