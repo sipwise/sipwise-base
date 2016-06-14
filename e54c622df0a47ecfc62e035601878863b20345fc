@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_0b3a8bcd",
+        "filename": "debian/control",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-14T16:31:27Z",
+      "side": 1,
+      "message": "\"current code executing system/exec might then not die correctly\"\n\nthats what i\u0027m afraid of, there might be code that expect it does not die, but just checks $? afterwards, e.g.:\n\n    system(@args); #no eval around!\n        \n    if ($? \u003d\u003d -1) {\n        print(\u0027failed to execute: \u0027 . $!,);\n    } elsif ($? \u0026 127) {\n        print(sprintf($mountargs-\u003e[0] . \u0027 died with signal %d, %s coredump\u0027, ($? \u0026 127), ($? \u0026 128) ? \u0027with\u0027 : \u0027without\u0027));\n    } else {\n        if ($? \u003d\u003d 0) {\n            print(sprintf($mountargs-\u003e[0] . \u0027 exited with value %d\u0027, $? \u003e\u003e 8));\n        } else {\n            print(sprintf($mountargs-\u003e[0] . \u0027 exited with value %d\u0027, $? \u003e\u003e 8));\n        }\n    }\n\nnot sure though if system without eval around is present somewhere.",
+      "parentUuid": "dabed58f_1dddf570",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_1d3ad5cd",
         "filename": "lib/Sipwise/Base.pm",
         "patchSetId": 3
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "\u003e does it also dies like the old \"use 5.0.14\" did?\n\nOn perl \u003c 5.14 it will croak yes.\n\n\u003e so here 5.014 language feature are active for the module to import.\n\nThey are activated for the code that uses this module, so those features\nget \"imported\" into the user\u0027s scope.\n\n\u003e just curious, would it be possible to load modules in different perl\n\u003e langue feature versions each?\n\nI\u0027m not sure I understand the question. Do you mean enabling different things depending on the perl currently in use? If so there is \":all\", but that seems strange, as then the user will not know which features are really present or not, so there\u0027s no guarantees provided by the module then.",
       "parentUuid": "dabed58f_1d3ad5cd",
+      "range": {
+        "startLine": 20,
+        "startChar": 4,
+        "endLine": 20,
+        "endChar": 43
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_2b10af4d",
+        "filename": "lib/Sipwise/Base.pm",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-14T16:31:27Z",
+      "side": 1,
+      "message": "sry, i was mislead here.. this import sub defines the code to run when \"use Sipwise::Base\" is encountered; its not a replacement for general \"use blah\" loading procedure.\n\njust for understanding, what is the effective difference between this way and the old approach?",
+      "parentUuid": "dabed58f_1daf35e5",
       "range": {
         "startLine": 20,
         "startChar": 4,
@@ -231,6 +279,24 @@
       "side": 1,
       "message": "This seems a bit out of scope for this specific change which is to fix the current test suite. \n\nBut as a separate change I guess it might make sense to move the check here so that it\u0027s a common feature anything relying on Sipwise::Base can rely on. But probably as a new threads.t unit test. :)",
       "parentUuid": "dabed58f_bd2b8981",
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_e005d614",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000013
+      },
+      "writtenOn": "2016-06-14T16:31:27Z",
+      "side": 1,
+      "message": "background: threads are not used in production code (as perlref\nrecommends), but are essential in some testsuites.\n\nsome time ago i observed a segfault (no perl err msgs at all!)\nwhen placing \n\nuse Sipwise::Base;\n\nin a ngcp-panel/t/api-rest/.t script, upon instantiating a thread\nwith -\u003enew.\n\nthat\u0027s why i prepared ngcp-panel/t/api-rest/threads.t back then,\nits a simple test, that just tries to start some threads.\n\nits rather short:\n\n#use Sipwise::Base; #when enabling this line, you saw (still see?)\n                    #the segfault.\nuse Test::More;\n\nBEGIN {\n    unshift(@INC,\u0027../../lib\u0027);\n}\nuse NGCP::Panel::Utils::DateTime qw();\n\nmy $delay \u003d 5;\nmy $t_a \u003d threads-\u003ecreate(sub {\n    diag(\u0027thread \u0027 . threads-\u003etid());\n    sleep($delay);\n});\n\nmy $t_b \u003d threads-\u003ecreate(sub {\n    diag(\u0027thread \u0027 . threads-\u003etid());\n    sleep($delay);\n});\n\n$t_a-\u003ejoin();\n$t_b-\u003ejoin();\n\nok(1,\u0027threads joined\u0027);\n#ok($t_a + $t_b \u003d\u003d 2,\u0027test threads joined\u0027);\n\ndone_testing;\n\ni thought it would make sense to move this here to sipwise::base.",
+      "parentUuid": "dabed58f_7df8b1e5",
       "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
