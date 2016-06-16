@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_a02599ac",
+        "filename": "debian/control",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2016-06-16T14:25:02Z",
+      "side": 1,
+      "message": "I don\u0027t see why libipc-system-simple-perl should be here instead of ngcp-panel",
+      "parentUuid": "dabed58f_1dddf570",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 26
+      },
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_1d3ad5cd",
         "filename": "lib/Sipwise/Base.pm",
         "patchSetId": 3
@@ -297,6 +321,24 @@
       "side": 1,
       "message": "background: threads are not used in production code (as perlref\nrecommends), but are essential in some testsuites.\n\nsome time ago i observed a segfault (no perl err msgs at all!)\nwhen placing \n\nuse Sipwise::Base;\n\nin a ngcp-panel/t/api-rest/.t script, upon instantiating a thread\nwith -\u003enew.\n\nthat\u0027s why i prepared ngcp-panel/t/api-rest/threads.t back then,\nits a simple test, that just tries to start some threads.\n\nits rather short:\n\n#use Sipwise::Base; #when enabling this line, you saw (still see?)\n                    #the segfault.\nuse Test::More;\n\nBEGIN {\n    unshift(@INC,\u0027../../lib\u0027);\n}\nuse NGCP::Panel::Utils::DateTime qw();\n\nmy $delay \u003d 5;\nmy $t_a \u003d threads-\u003ecreate(sub {\n    diag(\u0027thread \u0027 . threads-\u003etid());\n    sleep($delay);\n});\n\nmy $t_b \u003d threads-\u003ecreate(sub {\n    diag(\u0027thread \u0027 . threads-\u003etid());\n    sleep($delay);\n});\n\n$t_a-\u003ejoin();\n$t_b-\u003ejoin();\n\nok(1,\u0027threads joined\u0027);\n#ok($t_a + $t_b \u003d\u003d 2,\u0027test threads joined\u0027);\n\ndone_testing;\n\ni thought it would make sense to move this here to sipwise::base.",
       "parentUuid": "dabed58f_7df8b1e5",
+      "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_403a9dce",
+        "filename": "t/exports.t",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2016-06-16T14:25:02Z",
+      "side": 1,
+      "message": "definitely an option (although then again it won\u0027t neccessarily run in the same environment as our api tests - which is what you initially intended to test here)\n\nbut I also think out of scope for this commit/review. this is just to fix the stuff, that has been broken",
+      "parentUuid": "dabed58f_e005d614",
       "revId": "e54c622df0a47ecfc62e035601878863b20345fc",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
