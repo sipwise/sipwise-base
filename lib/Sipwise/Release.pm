@@ -22,9 +22,7 @@ This document describes Sipwise::Release version 1.005
 =item Update debian/changelog using the command git-dch like this:
 C<git-dch --id-length=7 --meta --multimaint-merge --ignore-branch --release --auto>
 
-=item *
-
-Update the perl files using
+=item Update the perl files using:
 C<perl-reversion -dryrun -set $VERSION>. Remove C<-dryrun> to actually
 run this command.
 

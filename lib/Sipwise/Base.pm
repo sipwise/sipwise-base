@@ -50,9 +50,10 @@ This document describes Sipwise::Base version 1.005
 
 =head1 DESCRIPTION
 
-The purpose of this module is to reduce the amount of boilerplate code and to enable some Perl features that are not
-available by default. This is in the spirit of
-L<http://modernperlbooks.com/mt/2009/10/remove-the-little-pessimizations.html|eliminating pessimisations>.
+The purpose of this module is to reduce the amount of boilerplate code and
+to enable some Perl features that are not available by default. This is in
+the spirit of
+L<eliminating pessimisations|http://modernperlbooks.com/mt/2009/10/remove-the-little-pessimizations.html>.
 
 Switches on the functionality of the pragmatic modules L<strictures>,
 L<TryCatch>.
