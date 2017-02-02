@@ -1,3 +1,12 @@
+libsipwise-base-perl (5.1.1.0+0~mr5.1.1.0) unstable; urgency=medium
+
+  [ Alexander Lutay ]
+  * [08e7fa3] TT#8299 Fix Jenkins tap test warnings
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Fri, 03 Feb 2017 00:44:32 +0100
+
 libsipwise-base-perl (5.1.0.0+0~mr5.1.0.0) unstable; urgency=medium
 
   * New release.
