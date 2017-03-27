@@ -1,0 +1,5 @@
+*.log
+*.substvars
+/debhelper-build-stamp
+/files
+/libsipwise-base-perl/

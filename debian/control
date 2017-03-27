@@ -3,13 +3,13 @@ Section: perl
 Priority: extra
 Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends:
- debhelper (>= 8),
+ debhelper (>= 9),
  libipc-system-simple-perl,
  libmodule-build-perl,
  libstrictures-perl,
  libtrycatch-perl,
-Standards-Version: 3.9.7
-Homepage: http://sipwise.com/
+Standards-Version: 3.9.8
+Homepage: https://www.sipwise.com/
 
 Package: libsipwise-base-perl
 Architecture: all
@@ -19,5 +19,7 @@ Depends:
  libtrycatch-perl,
  ${misc:Depends},
  ${perl:Depends},
-Description: Perl module Sipwise::Base
- TODO
+Description: Sipwise base perl module
+ This package provides the Sipwise::Base Perl module which contains
+ standard Sipwise boilerplate and tries to enforce best coding practices
+ via code checks and default settings.
