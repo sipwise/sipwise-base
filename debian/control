@@ -23,3 +23,13 @@ Description: Sipwise base perl module
  This package provides the Sipwise::Base Perl module which contains
  standard Sipwise boilerplate and tries to enforce best coding practices
  via code checks and default settings.
+
+Package: libsipwise-base-bash
+Architecture: all
+Description: Sipwise base bash library
+ This package provides several Bash library files, which contain common
+ shell functions to be used on Sipwise's codebase.
+ .
+ Included libraries:
+ - sipwise-base.sh: Common functions for any bash script.
+ - sipwise-init.sh: Common functions for sysvinit script.
