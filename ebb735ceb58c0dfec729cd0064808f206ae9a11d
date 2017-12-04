@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baada198_1fe515a8",
+        "filename": "debian/libsipwise-base-bash.install",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000042
+      },
+      "writtenOn": "2017-12-04T18:25:30Z",
+      "side": 1,
+      "message": "For me /usr/lib/bash is a strange location, and I haven\u0027t found packages with similar paths.\n\nStill this package would be a bit special anyway, \"bash shared libs\" is not something common, so OK for me.\n\nPS: Alternative: /usr/share/sipwwise-base/bash-lib/ ?",
+      "revId": "ebb735ceb58c0dfec729cd0064808f206ae9a11d",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
+    }
+  ]
+}
