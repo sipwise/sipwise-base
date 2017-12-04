@@ -16,6 +16,24 @@
       "revId": "ebb735ceb58c0dfec729cd0064808f206ae9a11d",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_3ff9f94d",
+        "filename": "debian/libsipwise-base-bash.install",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000016
+      },
+      "writtenOn": "2017-12-04T19:29:32Z",
+      "side": 1,
+      "message": "This is following libbash setup, which I agree does not feel right, but meh. Perhaps I should indeed put it in /usr/share/bash and file a bug on libbash. The problem is that the directory there is part of the \"ABI\". :)",
+      "parentUuid": "baada198_1fe515a8",
+      "revId": "ebb735ceb58c0dfec729cd0064808f206ae9a11d",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
