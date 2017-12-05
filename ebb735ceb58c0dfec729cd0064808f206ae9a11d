@@ -34,6 +34,24 @@
       "revId": "ebb735ceb58c0dfec729cd0064808f206ae9a11d",
       "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baada198_bf49898d",
+        "filename": "debian/libsipwise-base-bash.install",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000042
+      },
+      "writtenOn": "2017-12-05T09:19:26Z",
+      "side": 1,
+      "message": "I see, that package didn\u0027t appear in my searches.\n\n/usr/share/bash feels like hijacking the namespace of the back package, somewhere where they could ship default files (e.g. bashrc/profile) if it was not historically done in /etc directly.  In the case of /usr/share I\u0027d use the package name, \"sipwise-base\", or something similar.\n\nI just noticed that systemd puts stuff in /lib/systemd which are not shared libraries but \"system services\", there are also the pkgconfig files, and probably other stuff which is not shared libraries -- in that respect, these files of libsipwise-base-bash are more shared libraries than those, in concept.\n\nAnyway, just bikeshedding, I gave you already +2 because :)",
+      "parentUuid": "baada198_3ff9f94d",
+      "revId": "ebb735ceb58c0dfec729cd0064808f206ae9a11d",
+      "serverId": "85315e57-5f03-49c3-83f8-201ae2313a75",
+      "unresolved": false
     }
   ]
 }
