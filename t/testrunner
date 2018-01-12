@@ -1,0 +1,4 @@
+#!/bin/bash
+perl ./Build.PL
+./Build manifest
+./Build dist
