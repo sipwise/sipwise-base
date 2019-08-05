@@ -1,3 +1,16 @@
+libsipwise-base-perl (8.0.0.0+0~mr8.0.0.0) unstable; urgency=medium
+
+  [ Alexander Lutay ]
+  * [9c14fe2] TT#60950 Switch sipwise-base docker to buster
+
+  [ Guillem Jover ]
+  * [a3d42cf] TT#61954 Update copyright years
+  * [078397e] TT#61954 Set debhelper compat level in Build-Depends instead of debian/compat
+
+  [ Sipwise Jenkins Builder ]
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 05 Aug 2019 21:00:49 +0200
+
 libsipwise-base-perl (7.5.0.0+0~mr7.5.0.0) unstable; urgency=medium
 
   * New release.
