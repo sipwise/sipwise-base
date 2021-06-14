@@ -1,3 +1,10 @@
+libsipwise-base-perl (10.0.0.0+0~mr10.0.0.0) unstable; urgency=medium
+
+  [ Manuel Montecelo ]
+  * [d67055d] TT#118659 Switch Dockerfile from Debian buster to bullseye
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 14 Jun 2021 16:39:06 +0200
+
 libsipwise-base-perl (9.5.0.0+0~mr9.5.0.0) unstable; urgency=medium
 
   * New release.
