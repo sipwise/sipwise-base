@@ -3,12 +3,12 @@ Section: perl
 Priority: optional
 Maintainer: Sipwise Development Team <support@sipwise.com>
 Build-Depends:
- debhelper-compat (= 12),
+ debhelper-compat (= 13),
  libipc-system-simple-perl,
  libmodule-build-perl,
  libstrictures-perl,
  libtrycatch-perl,
-Standards-Version: 3.9.8
+Standards-Version: 4.5.1
 Homepage: https://www.sipwise.com/
 
 Package: libsipwise-base-perl
