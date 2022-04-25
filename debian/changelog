@@ -1,3 +1,9 @@
+libsipwise-base-perl (7.5.13.0+0~mr7.5.13.0) unstable; urgency=medium
+
+  * New release.
+
+ -- Sipwise Jenkins Builder <jenkins@sipwise.com>  Mon, 25 Apr 2022 13:03:37 +0200
+
 libsipwise-base-perl (7.5.12.0+0~mr7.5.12.0) unstable; urgency=medium
 
   * New release.
