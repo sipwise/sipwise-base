@@ -11,8 +11,13 @@ Sipwise::Boilerplate - a template for new code
 
 =head1 SYNOPSIS
 
-Copy the following text, outdent it, save to a new file, then fill it in. Delete the C<=for author> POD sections after
-you are done with them.
+This module describes the module boilerplate to be used as a template
+when creating new Sipwise modules.
+
+=head1 DESCRIPTION
+
+Copy the following text, outdent it, save to a new file, then fill it in.
+Delete the C<=for author> POD sections after you are done with them.
 
     package Something::Or::Other 1.000;
     use Sipwise::Base;
@@ -185,6 +190,27 @@ you are done with them.
 
     Your Name C<< <yname@sipwise.com> >>
 
-    =head1 LICENCE
+    =head1 LICENSE
 
     restricted
+
+=head1 AUTHOR
+
+Sipwise Developers
+
+=head1 LICENSE
+
+Copyright © 2013-2023 Sipwise GmbH, Austria.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
