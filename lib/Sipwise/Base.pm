@@ -24,7 +24,7 @@ sub import {
     for my $f (sort keys %features) {
         $export .= "$features{$f}\n";
     }
-    eval $export;
+    eval $export; ## no critic (BuiltinFunctions::ProhibitStringyEval)
 
     @_ = ($class, ':all');
     goto &autodie::import;
