@@ -1,6 +1,8 @@
 package Sipwise::CodingStandards 1.005;
 use Sipwise::Base;
 
+1;
+
 __END__
 
 =encoding UTF-8

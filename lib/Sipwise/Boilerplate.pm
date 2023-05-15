@@ -1,6 +1,8 @@
 package Sipwise::Boilerplate 1.005;
 use Sipwise::Base;
 
+1;
+
 __END__
 
 =encoding UTF-8
@@ -26,6 +28,8 @@ Delete the C<=for author> POD sections after you are done with them.
     … # attributes, methods, package-level code go here
 
     $CLASS->meta->make_immutable;
+
+    1;
 
     __END__
 
