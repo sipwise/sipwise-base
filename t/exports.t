@@ -1,6 +1,8 @@
 use Sipwise::Base;
 use Test::More import => [qw(done_testing ok)];
 
+## no critic (BuiltinFunctions::ProhibitStringyEval, ValuesAndExpressions::ProhibitImplicitNewlines)
+
 eval 'use t::StrictVars';
 ok $@, 'strict vars';
 
