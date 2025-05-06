@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 use Test::More import => [qw(plan)];
 
 plan skip_all => 'Author test' unless $ENV{AUTHOR_TESTING};
